@@ -4,4 +4,16 @@
     <string name="create_order_action_title">Create Order</string>
     <string name="share_action_title">Share</string>
     <string name="home_fragment">Home Fragment</string>
+    <string-array name="pizzas">
+        <item>Diavolo</item>
+        <item>Funghi</item>
+    </string-array>
+    <string-array name="pastas">
+        <item>Spaghetti Bolognese</item>
+        <item>Lasagna</item>
+    </string-array>
+    <string-array name="stores">
+        <item>Cambridge</item>
+        <item>Sebastopol</item>
+    </string-array>
 </resources>
