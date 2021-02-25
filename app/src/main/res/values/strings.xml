@@ -2,20 +2,9 @@
     <string name="app_name">Bits and Pizza</string>
     <string name="create_order_label">Create Order</string>
     <string name="create_order_action_title">Create Order</string>
+    <string name="detail_menu">Detail Menu</string>
     <string name="share_action_title">Share</string>
     <string name="home_fragment">Home Fragment</string>
-    <string-array name="pizzas">
-        <item>Diavolo</item>
-        <item>Funghi</item>
-    </string-array>
-    <string-array name="pastas">
-        <item>Spaghetti Bolognese</item>
-        <item>Lasagna</item>
-    </string-array>
-    <string-array name="stores">
-        <item>Cambridge</item>
-        <item>Sebastopol</item>
-    </string-array>
     <string name="home_tab">Home</string>
     <string name="pizza_tab">Pizzas</string>
     <string name="pasta_tab">Pastas</string>
@@ -31,4 +20,20 @@
     </string>
     <string name="order_name_hint">Please enter your name</string>
     <string name="order_details_hint">Please enter your order</string>
+    <string-array name="pizzas">
+        <item>Diavolo</item>
+        <item>Funghi</item>
+    </string-array>
+    <string-array name="pastas">
+        <item>Spaghetti Bolognese</item>
+        <item>Lasagna</item>
+    </string-array>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string-array name="stores">
+        <item>Cambridge</item>
+        <item>Sebastopol</item>
+    </string-array>
 </resources>

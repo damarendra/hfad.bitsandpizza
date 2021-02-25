@@ -21,6 +21,12 @@ public class CaptionImagesAdapter extends
     private String[] captions;
     private int[] img;
 
+    private CaptionImagesAdapterOnClickListener listener;
+
+    public interface CaptionImagesAdapterOnClickListener {
+        void onClick(int position);
+    }
+
     public CaptionImagesAdapter(String[] captions, int[] img) {
         this.captions = captions;
         this.img = img;
@@ -37,7 +43,7 @@ public class CaptionImagesAdapter extends
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CaptionImagesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CaptionImagesViewHolder holder, final int position) {
         CardView cardView = holder.cardView;
 
         ImageView cardImg = (ImageView) cardView.findViewById(R.id.card_img);
@@ -46,11 +52,23 @@ public class CaptionImagesAdapter extends
 
         TextView cardCaption = (TextView) cardView.findViewById(R.id.card_caption);
         cardCaption.setText(captions[position]);
+
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(listener != null)
+                    listener.onClick(position);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return captions.length;
+    }
+
+    public void setCaptionImagesViewHolderListener(CaptionImagesAdapterOnClickListener listener) {
+        this.listener = listener;
     }
 
     public static class CaptionImagesViewHolder extends RecyclerView.ViewHolder {
